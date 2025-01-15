@@ -1,0 +1,36 @@
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BookService } from '../../Services/book.service';
+import { Ibook } from '../../Models/book.mode';
+
+
+@Component({
+  selector: 'app-book-detail',
+  templateUrl: './book-detail.component.html',
+  styleUrls: ['./book-detail.component.css']
+})
+export class BookDetailComponent {
+  bookSelected!: Ibook;
+
+  private route = inject(Router);
+  private Aroute = inject(ActivatedRoute);
+  private BookService = inject(BookService);
+
+  constructor() {
+    this.Aroute.params.subscribe(params => {
+      const id = params['id'];
+      const book = this.BookService.getBookById(Number(id));
+
+      if (!book) {
+        console.log('Book not found');
+        this.route.navigate(['not-found', id]);
+      } else {
+        this.bookSelected = book;
+      }
+    });
+  }
+
+  gotoHome(): void {
+    this.route.navigate(['']);
+  }
+}

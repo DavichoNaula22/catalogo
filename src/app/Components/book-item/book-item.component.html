@@ -1,0 +1,10 @@
+<section class="item-book" (click)="navigateToID()">
+    <p id="id">{{ item.id }}</p>
+    <div class="description">
+      <h2>Producto: {{ item.title }}</h2>
+      <p id="author">Precio: {{ item.author }}</p>
+      <!-- Usa data binding para la imagen -->
+      <img [src]="item.imageUrl" />
+    </div>
+  </section>
+  

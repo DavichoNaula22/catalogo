@@ -1,0 +1,23 @@
+
+<section class="add-book-form">
+    <h2>Agregar un nuevo producto</h2>
+    <form (ngSubmit)="addBook()">
+        <label for="title">Producto:</label>
+        <input type="text" id="title" [(ngModel)]="newBook.title" name="title" required>
+
+        <label for="author">precio:</label>
+        <input type="text" id="author" [(ngModel)]="newBook.author" name="author" required>
+
+        <button type="submit">Agregar Cosa</button>
+
+        <section class="list-books">
+            <div class="item" *ngFor="let item of listaLibros">
+                
+                <app-book-item [item]="item"></app-book-item>
+            </div>
+        </section>
+        
+    </form>
+</section>
+
+

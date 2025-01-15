@@ -1,0 +1,60 @@
+/* Contenedor principal */
+.detail-book {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Transición al pasar el mouse */
+  .detail-book:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  /* Sección del mensaje de error */
+  .item-book h2 {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Rojo para destacar el error */
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  /* Botón de regresar */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover del botón */
+  button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .detail-book {
+      padding: 15px;
+    }
+  
+    .item-book h2 {
+      font-size: 1.2rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
