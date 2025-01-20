@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';  // Importa FormsModule
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { BooksListComponent } from '../app/Views/books-list/books-list.component';
-import { BookItemComponent } from '../app/Components/book-item/book-item.component';
+import { routes } from './app.routes';
+import { CartComponent } from './Views/cart/cart.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BooksListComponent,
-    BookItemComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule  // Asegúrate de que FormsModule esté aquí
+    FormsModule,
+    RouterModule.forRoot(routes), // Configuración de rutas
+    CommonModule,
+    RouterModule,
+    CartComponent // Importa CommonModule para las directivas comunes
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

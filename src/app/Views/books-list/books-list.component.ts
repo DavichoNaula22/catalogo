@@ -40,4 +40,6 @@ export class BooksListComponent {
       this.newBook = { id: 0,title: '', author: '', imageUrl:''  }; // Limpia los campos del formulario
     }
   }
+
+  
 }
