@@ -1,7 +1,7 @@
 // cart.component.ts
 import { Component, inject } from '@angular/core';
 import { CartService } from '../../Services/cart.service';
-import { Ibook } from '../../Models/book.mode';
+import { Ibook } from '../../Models/book.mode'; // Asegúrate de que 'Ibook' esté correctamente tipado
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -35,8 +35,17 @@ export class CartComponent {
 
   private calculateTotal(): void {
     this.total = this.cartItems.reduce((sum, item) => {
-      const price = parseFloat(item.author.replace('$', ''));
-      return sum + price;
+      const priceNumber = item.price;
+
+    
+
+      // Si el precio ya es un número, sumarlo directamente
+      if (typeof priceNumber === 'number') {
+        return sum + priceNumber;
+      }
+
+      // Si el precio no es ni una cadena ni un número, lo ignoramos (puedes manejarlo de otra forma si lo necesitas)
+      return sum;
     }, 0);
   }
 }

@@ -27,17 +27,17 @@ export class BooksListComponent {
   newBook: Ibook = { 
     id: 0,         // Un valor temporal, será asignado correctamente en el servicio
     title: '', 
-    author: '', 
+    price: 0 , 
     imageUrl: ''   // Valor predeterminado vacío
   };
   
 
   // Método para agregar un nuevo libro
   addBook() {
-    if (this.newBook.title && this.newBook.author) {
+    if (this.newBook.title && this.newBook.price) {
       this.bookService.addBook(this.newBook); // Agrega el libro al servicio
       this.listaLibros = this.bookService.getBooks(); // Actualiza la lista de libros
-      this.newBook = { id: 0,title: '', author: '', imageUrl:''  }; // Limpia los campos del formulario
+      this.newBook = { id: 0,title: '', price: 0 , imageUrl:''  }; // Limpia los campos del formulario
     }
   }
 

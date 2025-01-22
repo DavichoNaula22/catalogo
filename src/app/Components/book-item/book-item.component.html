@@ -2,11 +2,12 @@
   <p id="id">{{ item.id }}</p>
   <div class="description">
     <h2>Producto: {{ item.title }}</h2>
-    <p id="author">Precio: {{ item.author }}</p>
-    <img [src]="item.imageUrl" alt="Imagen del producto" />
+    <p id="author">Precio :  {{ item.price }}
+</p>    <img [src]="item.imageUrl" alt="Imagen del producto" class="product-image" />
 
-    <button (click)="addToCart($event)">Añadir al carrito</button>
-    <button (click)="navigateToID()">Ver detalles</button>
-
+    <div class="buttons">
+      <button (click)="addToCart($event)" class="add-to-cart-btn">Añadir al carrito</button>
+      <button (click)="navigateToID()" class="view-details-btn">Ver detalles</button>
+    </div>
   </div>
 </section>

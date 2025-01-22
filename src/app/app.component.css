@@ -1,141 +1,99 @@
-/* Estilos globales básicos para Angular */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif; /* Asegúrate de importar esta fuente */
-    background-color: #f0f0f5; /* Color de fondo ligeramente más claro */
-    color: #333; /* Color de texto principal */
-    line-height: 1.6; /* Espacio entre líneas */
-    -webkit-font-smoothing: antialiased; /* Suavizado de fuentes para navegadores WebKit */
-    transition: background-color 0.3s ease; /* Transición para cambio de fondo */
-  }
-  
-  /* Contenedor principal del componente */
-  .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 30px;
-    background: #fff; /* Fondo blanco para el contenido */
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil y amplia */
-    transition: all 0.3s ease-in-out; /* Transiciones suaves */
-    overflow: hidden; /* Asegura que los bordes redondeados no se corten */
-  }
-  
-  /* Transición elegante al pasar el mouse */
-  .container:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
-    transform: translateY(-6px); /* Leve elevación */
-  }
-  
-  /* Textos */
-  h1 {
-    color: #2c3e50; /* Color oscuro para el título principal */
-    font-size: 3rem; /* Título más grande */
-    font-weight: 700; /* Peso de fuente bold */
-    margin-bottom: 25px; /* Espacio inferior */
-    text-align: center; /* Centrado */
-    text-transform: uppercase; /* Títulos en mayúsculas */
-    letter-spacing: 1.5px; /* Espaciado entre letras */
-  }
-  
-  /* Subtítulos */
-  h2, h3, h4, h5, h6 {
-    color: #4f5b66; /* Color más suave para subtítulos */
-    margin: 1.5rem 0 0.8rem 0; /* Espacios entre títulos y párrafos */
-    font-weight: 600; /* Peso de fuente semi-bold */
-    text-transform: capitalize; /* Capitaliza las primeras letras */
-  }
-  
-  /* Párrafos */
-  p {
-    font-size: 1.1rem;
-    line-height: 1.8; /* Espacio entre líneas para mayor legibilidad */
-    color: #666; /* Color de texto más suave */
-    margin: 1rem 0; /* Espacios entre párrafos */
-    font-weight: 400; /* Peso normal */
-  }
-  
-  /* Enlaces */
-  a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
-  }
-  
-  a:hover {
-    color: #2980b9; /* Color más oscuro al pasar el mouse */
-    text-decoration: underline;
-    transform: translateX(4px); /* Desplazamiento al pasar el mouse */
-  }
-  
-  /* Botones */
-  button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 15px;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px); /* Leve elevación */
-  }
-  
-  button:focus {
-    outline: none; /* Quitar el borde de enfoque */
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); /* Resaltar con sombra */
-  }
-  
-  /* Router outlet (puedes personalizar según el contenido) */
-  router-outlet {
-    display: block;
-    padding: 1rem;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .container {
-        padding: 20px; /* Ajuste en el padding para pantallas pequeñas */
-    }
-  
-    h1 {
-        font-size: 2.2rem; /* Reducción de tamaño para pantallas pequeñas */
-    }
-  
-    h2, h3, h4, h5, h6 {
-        margin: 1rem 0 0.5rem 0; /* Ajuste en márgenes */
-    }
-  
-    p {
-        font-size: 1rem; /* Reducción de tamaño en párrafos */
-    }
-  
-    button {
-        padding: 10px 20px; /* Ajuste de tamaño de botones */
-        font-size: 0.9rem;
-    }
-  }
+/* Contenedor principal */
+.container {
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7; /* Fondo ligero para la página */
+}
+
+/* Estilo único para el header */
+.header {
+  background-color: #232f3e; /* Azul oscuro similar al de Amazon */
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logotipo o nombre del sitio, para un toque personalizado */
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ff9900; /* Naranja de Amazon */
+}
+
+/* Estilo de los botones */
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px; /* Botones con bordes más redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+  min-width: 140px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de "Inicio" con un color distintivo */
+button:nth-child(1) {
+  background-color: #0073bb; /* Azul profundo */
+  color: white;
+  text-align: center;
+}
+
+button:nth-child(1):hover {
+  background-color: #005f8c; /* Azul oscuro */
+  transform: translateY(-2px);
+}
+
+button:nth-child(1):active {
+  background-color: #004b74; /* Azul aún más oscuro */
+}
+
+/* Botón de "Ir al Carrito" con un tono naranja fuerte */
+button:nth-child(2) {
+  background-color: #ff9900; /* Naranja de Amazon */
+  color: white;
+  text-align: center;
+}
+
+button:nth-child(2):hover {
+  background-color: #e68900; /* Naranja más oscuro */
+  transform: translateY(-2px);
+}
+
+button:nth-child(2):active {
+  background-color: #cc7a00; /* Naranja más oscuro aún */
+}
+
+/* Estilos para el contenedor del router */
+router-outlet {
+  margin-top: 30px;
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
-  
-  .header a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
+
+  .header h1 {
+    font-size: 1.6rem;
+    text-align: center;
   }
-  
-  .header a:hover {
-    background-color: #555;
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
   }
-  
+}

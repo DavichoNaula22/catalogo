@@ -7,7 +7,7 @@
       <div class="cart-item" *ngFor="let item of cartItems">
         <div class="item-details">
           <p class="item-title">{{ item.title }}</p>
-          <p class="item-price">{{ item.author }}</p>
+          <p class="item-price">{{ item.price }}</p>
         </div>
         <button class="remove-btn" (click)="removeFromCart(item)">
           Eliminar

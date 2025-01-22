@@ -1,39 +1,115 @@
+/* Estilos generales para la sección de detalles del producto */
 .detail-book {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 40px 0;
-    padding: 40px;
-    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
-#id {
-    color: #2563eb;
+/* Contenedor de información del producto */
+.item-book {
+    margin-bottom: 30px;
+}
+
+/* Estilo para el ID y el título */
+.item-book p,
+.item-book h2 {
+    margin: 15px 0;
+    color: #232f3e; /* Azul oscuro de Amazon */
+}
+
+/* ID del producto */
+.item-book #id {
+    font-size: 1rem;
+    color: #ff9900; /* Naranja Amazon */
+    font-weight: 500;
+}
+
+/* Título del producto */
+.item-book h2 {
+    font-size: 1.8rem;
     font-weight: bold;
-    font-size: 1.2rem;
+    color: #232f3e; /* Azul oscuro */
+    letter-spacing: -0.5px;
+    margin-top: 10px;
 }
 
-h2 {
-    color: #1e3a8a;
-    font-size: 2rem;
-    margin: 20px 0;
+/* Precio del producto */
+.item-book #author {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b12704; /* Rojo de Amazon */
+    margin-top: 5px;
 }
 
-#author {
-    font-size: 1.2rem;
-    color: #4b5563;
-}
-
+/* Botón de regresar */
 button {
-    background-color: #1e3a8a;
-    color: #ffffff;
+    display: inline-block;
+    background-color: #ff9900; /* Naranja de Amazon */
+    color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
     cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 200px;
     margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e68900; /* Hover color para el botón */
+    transform: scale(1.05);
 }
 
 button:focus {
     outline: none;
+}
+
+/* Estilos para dispositivos móviles (pantallas más pequeñas) */
+@media (max-width: 768px) {
+    .detail-book {
+        padding: 20px;
+    }
+
+    .item-book h2 {
+        font-size: 1.5rem;
+    }
+
+    .item-book #author {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Estilos para dispositivos muy pequeños (móviles) */
+@media (max-width: 480px) {
+    .detail-book {
+        padding: 15px;
+    }
+
+    .item-book h2 {
+        font-size: 1.3rem;
+    }
+
+    .item-book p,
+    .item-book #author {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
 }
