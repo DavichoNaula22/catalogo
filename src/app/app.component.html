@@ -1,9 +1,28 @@
 <div class="container">
-<div class="header">
-  <button (click)="onHomeClick()">Inicio</button>
-  <button (click)="onCartClick()">Ir al Carrito</button>
-</div>
-<router-outlet>
-</router-outlet>
+  <!-- Header de la tienda -->
+  <header class="header">
+    <!-- Título de la tienda -->
+    <h1 class="store-title" role="heading" aria-level="1">Mi Tienda</h1>
 
+    <!-- Botones de navegación -->
+    <nav class="navigation">
+      <button 
+        (click)="onHomeClick()" 
+        class="btn btn-home" 
+        aria-label="Ir al inicio">
+        Inicio
+      </button>
+      <button 
+        (click)="onCartClick()" 
+        class="btn btn-cart" 
+        aria-label="Ir al carrito">
+        Ir al Carrito
+      </button>
+    </nav>
+  </header>
+
+  <!-- Sección del contenido principal, con un outlet de enrutamiento -->
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>

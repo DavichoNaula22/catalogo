@@ -7,9 +7,9 @@ import { Ibook } from '../Models/book.mode'; // Asegúrate de que el nombre y la
 export class BookService {
   // Lista inicial de libros
   listaLibros: Ibook[] = [
-    { id: 1, title: 'Proteina WHEY', price: 57, imageUrl: '' },
-    { id: 2, title: 'Trembolona', price: 50, imageUrl: '../assets/image/images.jpg' },
-    { id: 3, title: 'Creatina', price: 35, imageUrl: 'assets/image/Sin título.jpg' } // Evité espacios en el nombre del archivo
+    { id: 1, title: 'Proteina WHEY', price: 57, imageUrl: "./assets/image/ISO-SOG-1.png" },
+    { id: 2, title: 'Trembolona', price: 50, imageUrl: "./assets/image/images.jpg" },
+    { id: 3, title: 'Creatina', price: 35, imageUrl: './assets/image/Sin título.jpg' } // Evité espacios en el nombre del archivo
   ];
 
   constructor() {}

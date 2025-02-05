@@ -9,7 +9,25 @@
     border: 1px solid #ddd;
     font-family: 'Amazon Ember', Arial, sans-serif;
 }
-
+.imagen {
+    width: 150px;  /* Ancho fijo del contenedor */
+    height: 200px; /* Altura fija del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    margin: 10px auto; /* Espacio alrededor y centrado */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f7f7f7; /* Fondo gris suave */
+  }
+  
+  #tilimimagen {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Hace que la imagen ocupe toda la altura disponible */
+    object-fit: cover; /* Mantiene las proporciones sin distorsionar y cubriendo el contenedor */
+    border-radius: 8px; /* Opcional: Bordes redondeados para la imagen */
+  }
+  
 /* Contenedor de información del producto */
 .item-book {
     margin-bottom: 30px;
@@ -111,5 +129,9 @@ button:focus {
     button {
         padding: 10px;
         font-size: 1.1rem;
+    }
+    img.tilimimagen {
+        width: 150px;  /* Ajusta el ancho de la imagen */
+        font-weight: 20px;
     }
 }

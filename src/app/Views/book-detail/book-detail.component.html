@@ -3,6 +3,10 @@
       <p id="id">ID: {{ bookSelected.id }}</p>
       <h2>Producto: {{ bookSelected.title }}</h2>
       <p id="author">Precio: {{ bookSelected.price }}</p>
+      <div class="imagen">
+        <img id="tilimimagen" [src]="bookSelected.imageUrl" alt="{{ bookSelected.title }}">
+      </div>
+      
     </section>
     <button (click)="gotoHome()">Regresar</button>
   </div>
